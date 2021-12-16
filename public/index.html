@@ -55,6 +55,12 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="long-tweet" class="error">
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Message too long! Please keep the length to 140 characters<i class="fa-solid fa-triangle-exclamation"></i></p>
+        </div>
+        <div id="empty-tweet" class="error">
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Tweet empty, please type something<i class="fa-solid fa-triangle-exclamation"></i></p>
+        </div>
     <form action="./tweets/" method="post" class="form">
       <br>
       <label for="tweet-text" id = "tweet">What are you humming about?</label>
