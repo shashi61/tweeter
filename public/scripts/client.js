@@ -12,7 +12,7 @@ const createTweetElement = function(tweet) {
     // const createdTime = $('<span>').text(`${tweet.created_at}`);
     // const hr = $('<hr />');
 
-    // const article = $('<article>');
+    // const tweet = $('<article>');
     // const header = $('<header>');
     // const footer = $('<footer>');
 
@@ -75,11 +75,20 @@ const form = $('.form');
 //submit event for the form
 form.on("submit", function(event){
     event.preventDefault();
+    if($('#tweet-text').val().length > 140) {
+        return;
+    } 
+    if($('#tweet-text').val().length === 0){
+        $('#empty-tweet').slideDown();
+        return;
+    }
     const serializedStr = $( this ).serialize();
     $.post('/tweets', serializedStr, (response) => {
         console.log(response)
         loadTweets();
+    
       })
+    
     // $.ajax({
     //     url : "/tweets",
     //     method : "POST",
