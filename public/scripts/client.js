@@ -32,7 +32,7 @@ const createTweetElement = function(tweet) {
   <hr>
   <footer>
     <span>
-    ${tweet.created_at}
+    ${timeago.format(tweet.created_at)}
     </span>
    <div><i class="fa-solid fa-flag"></i>
     <i class="fas fa-retweet"></i>
@@ -44,27 +44,17 @@ const createTweetElement = function(tweet) {
   return $tweet;
 }
 const renderTweets = function(tweets) {
+    const $tweetsContainer = $('#tweets-container');
+    //Making sure conatiner is empty before populating new data
+    $tweetsContainer.empty();
   // loops through tweets
   for(let tweet of tweets){
     // calls createTweetElement for each tweet 
-    $('#tweets-container').append(createTweetElement(tweet)); 
+    const newTweet = createTweetElement(tweet);
+    $tweetsContainer.prepend(newTweet); 
   }
   
 }
-const form = $('.form');
-//submit event for the form
-form.on("submit", function(event){
-    event.preventDefault();
-    const serializedStr = $( this ).serialize();
-    $.ajax({
-        url : "/tweets",
-        method : "POST",
-        data : serializedStr
-      }).then(res =>{
-          console.log(res);
-      })  
-})
-
 //Function to load tweets
 const loadTweets= function(){
     $.ajax({
@@ -81,4 +71,24 @@ const loadTweets= function(){
     })
 }
 loadTweets();
+const form = $('.form');
+//submit event for the form
+form.on("submit", function(event){
+    event.preventDefault();
+    const serializedStr = $( this ).serialize();
+    $.post('/tweets', serializedStr, (response) => {
+        console.log(response)
+        loadTweets();
+      })
+    // $.ajax({
+    //     url : "/tweets",
+    //     method : "POST",
+    //     data : serializedStr
+    //   }).then(res =>{
+    //       console.log(res);
+    //   })  
+})
+
+
+
 })
