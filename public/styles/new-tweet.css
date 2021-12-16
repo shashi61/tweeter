@@ -48,3 +48,11 @@ article footer i:hover{
 #user-email{
     color: #c9d1ec;
 }
+.error{
+   display: none;
+    border: 2px solid red;
+    color: red;
+    text-align: center;
+    margin-top: 1em;
+    box-shadow: 5px 5px 5px 5px grey;
+}
