@@ -13,7 +13,13 @@ myInput.on("input", function(){
     counter.text(textLength);
     if($(this).val().length > 140) {
         counter.css("color", "red");
-    } 
+        $('#long-tweet').slideDown();
+    }
+    else{
+        $('#empty-tweet').slideUp();
+        $('#long-tweet').slideUp();
+        counter.css("color", "black");
+    }
 });
 
 })
