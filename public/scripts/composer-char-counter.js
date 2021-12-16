@@ -8,6 +8,7 @@ const counter = $('.counter');
 myInput.on("input", function(){
     //parisng counter's string value to integer
   const intValue = parseInt(counter.text());
+  //Assigning the value to counter 
     counter.text(intValue - 1);
     if($(this).val().length > 140) {
         counter.css("color", "red");
