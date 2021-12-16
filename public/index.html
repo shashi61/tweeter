@@ -52,9 +52,10 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
     <form action="./tweets/" method="post">
-      <label for="tweet-text">What are you humming about?</label>
+      <br>
+      <label for="tweet-text" id = "tweet">What are you humming about?</label>
       <div class="text-area"><textarea name="text" id="tweet-text"></textarea></div>
-      <div>
+      <div class = "button-output"> 
         <button type="submit" id="button">Tweet</button>
         <output name="counter" class="counter" for="tweet-text">140</output>
       </div>
