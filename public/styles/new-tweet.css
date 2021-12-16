@@ -1,3 +1,19 @@
-textarea{
-    width: 90%;
+.text-area > textarea{
+    border: none;
+    border-bottom: 3px solid black;
+    background-color: #f4f1ec; 
+    width: 100%;
+}
+.button-output{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#button{
+    background-color: #4056A1;
+    color: white;
+    font-family: "Bungee";
+}
+#button+.counter{
+    font-family: "Bungee";
 }
