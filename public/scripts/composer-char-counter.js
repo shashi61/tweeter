@@ -4,12 +4,13 @@ $('document').ready(()=>{
 const myInput = $('#tweet-text');
 //Finding and saving the output element to a variable
 const counter = $('.counter');
+const max = 140;
 //registering a call back 
 myInput.on("input", function(){
-    //parisng counter's string value to integer
-  const intValue = parseInt(counter.text());
+    //Calculating number of characters left
+   let textLength = max-$(this).val().length;
   //Assigning the value to counter 
-    counter.text(intValue - 1);
+    counter.text(textLength);
     if($(this).val().length > 140) {
         counter.css("color", "red");
     } 
