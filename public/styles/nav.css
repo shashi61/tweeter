@@ -1,31 +1,45 @@
-nav{
-    height: 120px;
+nav {
+    height: 80px;
     width: 100%;
     background-color: #4056A1;
     color: #FFFFFF;
-   padding:1.5em 1.5em;
-   display: flex;
-   justify-content: space-between;
-   position: fixed;
-   top: 0px;
+    padding: 1.5em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
 }
-.header-1{
+
+.header-1 {
     font-family: "Bungee";
     font-size: 2em;
 }
-.header, .header-2{
+
+.header, .header-2 {
     font-family: sans-serif;
 }
-.header{
+
+.header {
     font-weight: bold;
 }
-.header-2{
+
+.header-2 {
     font-weight: 100;
 }
-.fa-angles-down{
+
+.fa-angles-down {
     color: red;
     text-align: center;
 }
-.subContainer{
+
+.subContainer {
     text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        background-image: url(http://www.transparenttextures.com/patterns/asfalt-light.png);
+        background-color: #d68800;
+    }
+
 }
