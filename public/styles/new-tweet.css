@@ -1,58 +1,88 @@
-.text-area > textarea{
+.text-area>textarea {
     border: none;
     border-bottom: 3px solid #545149;
-    background-color: #f4f1ec; 
+    background-color: #f4f1ec;
     width: 100%;
 }
-.button-output{
+
+.text-area>textarea:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    font-weight: bold;
+}
+
+.button-output {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-#button{
+
+#button {
     background-color: #4056A1;
     color: white;
+}
+
+#button+.counter, #button {
     font-family: "Bungee";
 }
-#button+.counter{
-    font-family: "Bungee";
+
+#button+.counter, .text-area>textarea {
     color: #545149;
 }
-article{
-    margin:1em 0 ;
+
+article {
+    margin: 1em 0;
     padding: 1em;
     border: 3px solid #545149;
-    font-family: sans-serif;
 }
-article:hover{
-    box-shadow: 5px 5px 5px 5px grey;
-}
-article footer, article header div, article header{
+
+article footer, article header div, article header {
     display: flex;
     flex: row;
     justify-content: space-between;
-    font-size:medium;
+    font-size: medium;
 }
-article p{
+
+article>header>div>img {
+    height: 2.5em;
+    padding-right: 0.5em;
+}
+
+article>header span {
+    padding-top: 0.7em;
+}
+
+article p {
+    padding-top: 1em;
     font-size: large;
 }
-article hr{
+
+article hr {
     border: 2px solid #545149;
 }
-article footer i{
+
+article footer i {
     color: #4056A1;
 }
-article footer i:hover{
+
+article footer i:hover {
     color: rgb(172, 148, 13);
 }
-#user-email{
+
+#user-email {
     color: #c9d1ec;
 }
-.error{
-   display: none;
+
+.error {
+    display: none;
     border: 2px solid red;
     color: red;
     text-align: center;
     margin-top: 1em;
+}
+
+article:hover, .error {
     box-shadow: 5px 5px 5px 5px grey;
 }
