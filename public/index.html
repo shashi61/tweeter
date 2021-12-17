@@ -1,85 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- Google Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+<head>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
 
-    <!-- Nav CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- header CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-      <!--new-tweet CSS -->
-      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
- 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Nav CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!--Timeago script-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
-    <!-- Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
+  <!-- header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-     <span class = "header-1">tweeter</span>
-     <div class = "container-1">
-     <span class = "header">Write</span><span class = "header-2"> a new tweet</span>
-    <div class="subContainer"><i class="fa-solid fa-angles-down header-2"></i> </div>
-     </div>
-    </nav>
-    <!-- Header -->
+  <!--new-tweet CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!--Timeago script-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <div><span class="header-1">tweeter</span></div>
+    <div class="container-1">
+      <span class="header">Write</span><span class="header-2"> a new tweet</span>
+      <div class="subContainer"><i class="fa-solid fa-angles-down header-2"></i> </div>
+    </div>
+  </nav>
+  <!-- Header -->
+  <div class="first-container">
     <header class="header-0">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png">
       </div>
       <div>
-          <h2 id="heading"><span class="header">Shashi</span><span class="header-2"> Bawa</span></h2>
+        <h2 id="heading"><span class="header">Shashi</span><span class="header-2"> Bawa</span></h2>
       </div>
-  </header>
-    <!-- Page-specific (main) content here -->
+    </header>
+  </div>
+  <!-- Page-specific (main) content here -->
+  <div class="second-container">
     <main class="container">
       <section class="new-tweet">
         <div id="long-tweet" class="error">
-          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Message too long! Please keep the length to 140 characters<i class="fa-solid fa-triangle-exclamation"></i></p>
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Message too long! Please keep the length to 140
+            characters<i class="fa-solid fa-triangle-exclamation"></i></p>
         </div>
         <div id="empty-tweet" class="error">
-          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Tweet empty, please type something<i class="fa-solid fa-triangle-exclamation"></i></p>
+          <p><i class="fa-solid fa-triangle-exclamation"></i>Error! Tweet empty, please type something<i
+              class="fa-solid fa-triangle-exclamation"></i></p>
         </div>
-    <form action="./tweets/" method="post" class="form">
-      <br>
-      <label for="tweet-text" id = "tweet">What are you humming about?</label>
-      <div class="text-area"><textarea name="text" id="tweet-text"></textarea></div>
-      <div class = "button-output"> 
-        <button type="submit" id="button">Tweet</button>
-        <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
-    </form>
-  </section>
-  <!--Tweets container-->
-  <section id="tweets-container">
-    
-  </section>
-    </main>
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+        <form action="./tweets/" method="post" class="form">
+          <br>
+          <!-- <label for="tweet-text" id="tweet">What are you humming about?</label> -->
+          <div class="text-area"><textarea name="text" id="tweet-text"
+              placeholder="What are you humming about?"></textarea></div>
+          <div class="button-output">
+            <button type="submit" id="button">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+      <!--Tweets container-->
+      <section id="tweets-container">
 
-    <!-- Composer-char-counter.JS -->
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-  </body>
+      </section>
+
+    </main>
+  </div>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+
+  <!-- Composer-char-counter.JS -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</body>
+
 </html>
