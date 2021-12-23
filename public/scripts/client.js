@@ -83,5 +83,6 @@ $('document').ready(()=>{
     });
     $('#tweet-text').val('');
     $('#tweet-text').focus();
+   $('.counter').text('140');
   });
 });
